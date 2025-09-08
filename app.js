@@ -1,11 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const morgan = require("morgan");
 
 const app = express();
 dotenv.config();
 
 app.use(express.json());
+app.use(morgan("dev"));
 
 const port = process.env.PORT || 5000;
 
