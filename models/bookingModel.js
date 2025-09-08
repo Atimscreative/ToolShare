@@ -28,6 +28,7 @@ const bookingSchema = new mongoose.Schema(
         values: ["pending", "approved", "rejected"],
         message: "Booking status can only be 'pending, approved, rejected'",
       },
+      default: "pending",
     },
   },
   {
